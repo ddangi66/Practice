@@ -37,28 +37,28 @@ void multiply(int m, int n, int p, int a[m][n], int b[n][p], int c[m][p])
 int main()
 {
     int r1, c1, r2, c2;
-    printf("Row and column for matrix #1 :\n");
+    printf("Row And Column For First Matrix :\n");
     scanf("%d %d", &r1, &c1);
-    printf("Row and column for matrix #2 :\n");
+    printf("Row And Column For Second Matrix :\n");
     scanf("%d %d", &r2, &c2);
 
     if (r2 != c1) {
-        printf("Matrices with the given order cannot be multiplied with each other..!\n");
+        printf("Matrices With The Given Order Cannot Be Multiplied With Each Other..!\n");
         exit(EXIT_FAILURE);
     }
 
     int mat1[r1][c1], mat2[r2][c2], ans[r1][c2];
-    printf("Enter elements of the first matrix.\n");
+    printf("Enter Elements Of The First Matrix.\n");
     input(r1, c1, mat1);
-    printf("The elements of the first matrix are :\n");
+    printf("The Elements Of The First Matrix Are :\n");
     print(r1, c1, mat1);
-    printf("Enter elements of the second matrix.\n");
+    printf("Enter Elements Of The Second Matrix.\n");
     input(r2, c2, mat2);
-    printf("The elements of the second matrix are :\n");
+    printf("The Elements Of The Second Matrix Are :\n");
     print(r2, c2, mat2);
 
     multiply(r1, r2, c2, mat1, mat2, ans);
-    printf("The product is :\n");
+    printf("The Product is :\n");
     print(r1, c2, ans);
 
     return EXIT_SUCCESS;
