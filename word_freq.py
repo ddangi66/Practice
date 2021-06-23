@@ -1,9 +1,9 @@
 input_line = input("Enter a string : ")
 
-words_dict = {}
+words = {}
 
 for word in input_line.split():
-    words_dict[word] = words_dict.get(word,0) + 1
+    words[word] = words.get(word,0) + 1
 
-for key in sorted(words_dict):
-  print("{} : {}".format(key,words_dict[key]))
+for key in sorted(words):
+  print("{} : {}".format(key,words[key]))
